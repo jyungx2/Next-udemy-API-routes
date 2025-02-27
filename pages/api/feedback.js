@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
 
-function buildFeedbackPath() {
+export function buildFeedbackPath() {
   return path.join(process.cwd(), "data", "feedback.json");
 }
 
-function extractFeedback(filePath) {
+export function extractFeedback(filePath) {
   const fileData = fs.readFileSync(filePath); // 파일이 존재하면 기존 데이터를 읽어오고, 존재하지 않으면 빈 배열을 기본값으로 설정
   const data = JSON.parse(fileData); // 기존 데이터를 JS 오브젝트로 변환한 후 새로운 피드백을 추가
   return data;
