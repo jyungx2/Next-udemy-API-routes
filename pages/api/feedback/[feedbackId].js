@@ -1,4 +1,4 @@
-import { buildFeedbackPath, extractFeedback } from "../api/feedback";
+import { buildFeedbackPath, extractFeedback } from ".";
 
 function handler(req, res) {
   // if (req.method === "DELETE") {}
